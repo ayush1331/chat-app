@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleekChat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <div id="auth-view" class="view active">
+            
+            <div id="login-form-container">
+                <form id="login-form" class="auth-form">
+                    <h2>Welcome Back</h2>
+                    <p>Log in to join the chat.</p>
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <p class="form-error" id="login-error"></p>
+                    <p class="form-switcher">
+                        No account? <a href="#" id="show-register">Register here</a>
+                    </p>
+                </form>
+            </div>
+
+            <div id="register-form-container" style="display: none;">
+                <form id="register-form" class="auth-form">
+                    <h2>Create Account</h2>
+                    <p>Sign up for a new account.</p>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" required autocomplete="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" required autocomplete="new-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <p class="form-error" id="register-error"></p>
+                    <p class="form-success" id="register-success"></p>
+                    <p class="form-switcher">
+                        Already have an account? <a href="#" id="show-login">Login here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <div id="chat-view" class="view">
+            <header class="chat-header">
+                <h2>SleekChat</h2>
+                <div class="header-right">
+                    <span id="my-username"></span>
+                    <button id="logout-btn" class="btn btn-secondary">Logout</button>
+                </div>
+            </header>
+            
+            <div class="chat-main">
+                <aside class="chat-sidebar">
+                    <h3>Users Online</h3>
+                    <ul id="user-list">
+                        </ul>
+                </aside>
+                
+                <main class="chat-window">
+                    <div id="message-container">
+                        </div>
+                    
+                    <form id="chat-form" class="chat-input-form">
+                        <input id="message-input" type="text" placeholder="Type your message..." autocomplete="off">
+                        <button type="submit" class="btn btn-send">Send</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

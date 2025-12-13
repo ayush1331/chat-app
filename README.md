@@ -36,7 +36,6 @@ This setup enables secure traffic handling, zero-downtime deployments, and autom
 ## 🏗 Architecture Overview
 The application is hosted on an Amazon Linux EC2 instance with layered security and automation.
 
-```mermaid
 graph TD
     User((User)) -->|HTTP / WebSockets| Internet
     Internet -->|Port 80| SG[AWS Security Group]
@@ -44,14 +43,13 @@ graph TD
     SG --> Nginx[Nginx Reverse Proxy]
 
     subgraph AWS EC2 Instance
-        Nginx --> NodeApp[Node.js App (PM2)]
+        Nginx --> NodeApp["Node.js App (PM2)"]
         NodeApp --> DB[(MongoDB)]
 
         GHA[GitHub Actions Runner] -->|Deploy & Reload| NodeApp
     end
 
     GitHub[GitHub Repository] -->|Push to main| GHA
-````
 
 ### Key Components
 

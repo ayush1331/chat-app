@@ -1,4 +1,4 @@
-````markdown
+
 # SimpleTalk — Real-Time Chat Infrastructure on AWS
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
@@ -144,4 +144,4 @@ Designed to stay **Free Tier eligible** for new AWS accounts.
 📂 [GitHub Profile](https://www.google.com/search?q=link-here)
 
 ```
-```
+

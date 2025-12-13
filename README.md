@@ -140,8 +140,8 @@ Designed to stay **Free Tier eligible** for new AWS accounts.
 
 ### 👨‍💻 Author
 
-**Ayush Ranjan** *DevOps / Cloud Engineering Enthusiast* 🔗 [LinkedIn Profile](https://www.google.com/search?q=link-here)  
-📂 [GitHub Profile](https://www.google.com/search?q=link-here)
+**Ayush Ranjan** *DevOps / Cloud Engineering Enthusiast* 🔗 [LinkedIn Profile](https://www.linkedin.com/in/ayushranjan2504/)
+📂 [GitHub Profile](https://github.com/ayush1331)
 
 ```
 
